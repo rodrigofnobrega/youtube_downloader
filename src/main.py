@@ -1,6 +1,6 @@
 from pytube import YouTube
-from src.utils.info_video import InfoVideo
-from src.modules.download import Download
+from utils.info_video import InfoVideo
+from modules.download import Download
 
 def main() -> None:
     print('''=======YOUTUBE DOWNLOADER=======\n''')
