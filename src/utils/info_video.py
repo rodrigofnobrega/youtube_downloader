@@ -54,7 +54,6 @@ class InfoVideo:
     def get_adaptive(self) -> bool:
         return self.adaptive 
 
-
     def getVideoInfos(self):
         return {
                     "filename_sufix": self.filename_sufix,
