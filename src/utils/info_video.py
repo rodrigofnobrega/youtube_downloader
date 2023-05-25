@@ -1,67 +1,66 @@
 class InfoVideo:
-    filename_sufix: str = None
-    video_title: str = None
-    filename: str = None
-    output_path: str = None
-    only_audio: bool = None
-    only_video: bool = None
-    adaptive: bool = None
+    __filename_sufix: str = None
+    __video_title: str = None
+    __filename: str = None
+    __output_path: str = None
+    __only_audio: bool = None
+    __only_video: bool = None
+    __adaptive: bool = None
 
     def __init__(self) -> None:    
         pass
 
     # Setters
-    def set_filename_sufix(self, filename_sufix: str) -> None:
-        self.filename_sufix = filename_sufix
+    def set_filename_sufix(self, __filename_sufix: str) -> None:
+        self.__filename_sufix = __filename_sufix
 
-    def set_video_title(self, video_title: str) -> None:
-        self.video_title = video_title
+    def set_video_title(self, __video_title: str) -> None:
+        self.__video_title = __video_title
     
-    def set_output_path(self, output_path: str) -> None:
-        self.output_path = output_path
+    def set_output_path(self, __output_path: str) -> None:
+        self.__output_path = __output_path
     
-    def set_only_audio(self, only_audio: bool) -> None:
-        self.only_audio = only_audio
+    def set_only_audio(self, __only_audio: bool) -> None:
+        self.__only_audio = __only_audio
 
-    def set_only_video(self, only_video: bool) -> None:
-        self.only_video = only_video
+    def set_only_video(self, __only_video: bool) -> None:
+        self.__only_video = __only_video
 
-    def set_adaptive(self, adaptive: bool) -> None:
-        self.adaptive = adaptive
+    def set_adaptive(self, __adaptive: bool) -> None:
+        self.__adaptive = __adaptive
 
     def set_filename(self) -> None:
-        self.filename = str("{video_title}{filename_sufix}").format(video_title=self.video_title, filename_sufix=self.filename_sufix)
+        self.__filename = str("{video_title}{filename_sufix}").format(video_title=self.__video_title, filename_sufix=self.__filename_sufix)
 
     # Getters
     def get_filename_sufix(self) -> str:
-        return self.filename_sufix 
+        return self.__filename_sufix 
 
     def get_video_title(self) -> str:
-        return self.video_title
+        return self.__video_title
 
     def get_filename(self) -> str:
-        return self.filename 
+        return self.__filename 
     
     def get_output_path(self) -> str:
-        return self.output_path 
+        return self.__output_path 
     
     def get_only_audio(self) -> bool:
-        return self.only_audio 
+        return self.__only_audio 
 
     def get_only_video(self) -> bool:
-        return self.only_video 
+        return self.__only_video 
 
     def get_adaptive(self) -> bool:
-        return self.adaptive 
+        return self.__adaptive 
 
     def getVideoInfos(self):
         return {
-                    "filename_sufix": self.filename_sufix,
-                    "filename": self.filename,
-                    "output_path": self.output_path,
-                    "only_audio": self.only_audio,
-                    "only_video": self.only_video,
-                    "adaptive": self.adaptive
+                    "filename_sufix": self.__filename_sufix,
+                    "filename": self.__filename,
+                    "output_path": self.__output_path,
+                    "only_audio": self.__only_audio,
+                    "only_video": self.__only_video,
+                    "adaptive": self.__adaptive
                 }
-
     

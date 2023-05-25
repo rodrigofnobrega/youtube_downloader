@@ -20,9 +20,9 @@ def main() -> None:
     info_video.set_adaptive(True)
     info_video.set_filename()
 
-    downloader: Download = Download(yt=yt, only_audio=info_video.get_only_audio(), only_video=info_video.get_only_video(), adaptive=info_video.get_adaptive(), output_path=info_video.get_output_path(), filename=info_video.get_filename())
+    downloader: Download = Download(yt=yt, output_path=info_video.get_output_path(), filename=info_video.get_filename())
 
-    downloader.downloader()
+    downloader.downloader(only_audio=info_video.get_only_audio(), only_video=info_video.get_only_video(), adaptive=info_video.get_adaptive())
 
 if __name__ == "__main__":
     main()
