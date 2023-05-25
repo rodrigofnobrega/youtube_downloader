@@ -32,9 +32,8 @@ class Download:
         
     def downloader(self, only_audio: bool, only_video: bool, adaptive: bool=True):
         self.__stream = self.__yt.streams.filter(file_extension="mp4", only_audio=only_audio, only_video=only_video, adaptive=adaptive).first()
-        
+
         self.__yt.register_on_progress_callback(self.bar_download_progress)
         self.__yt.register_on_complete_callback(self.info_about_download)
         
         self.__stream.download(output_path=self.__output_path, filename=self.__filename)
-        
