@@ -32,8 +32,8 @@ class InfoVideo:
     def get_video_title(self) -> str:
         return self.__video_title
 
-    def get_file_path(self) -> str:
-        return self.__file_path 
+    def set_file_path(self) -> str:
+        return self.__filepath 
     
     def get_download_dir(self) -> str:
         return self.__download_dir 

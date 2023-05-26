@@ -14,11 +14,11 @@ def main() -> None:
 
     info_video: InfoVideo = InfoVideo()
     info_video.set_video_title(yt.title)
-    info_video.set_output_path(download_dir)
+    info_video.set_download_dir(download_dir)
     info_video.set_only_audio(True)
     info_video.set_only_video(False)
     info_video.set_adaptive(True)
-    info_video.set_filename()
+    info_video.set_file_path()
 
     downloader: Download = Download(yt=yt, output_path=download_dir, filename=info_video.get_filename())
 
