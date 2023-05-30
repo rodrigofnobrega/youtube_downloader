@@ -6,6 +6,7 @@ class Download:
     __yt: YouTube = None
     __output_path: str = None
     __filename: str = None
+    __file_path: str = None
     __stream: Stream = None
 
     def __init__(self, yt: YouTube, output_path: str, filename: str) -> None:
@@ -24,13 +25,13 @@ class Download:
 
     def info_about_download(self, stream: Stream, file_path: str):
         print('''\n
-        =======Download Complete=======
-        Output path => {output_path}
-        File name => {filename}
-        File size => {filesize}Mb
-        '''.format(output_path=self.__output_path, filename=self.__filename, filesize=self.__stream.filesize_mb))
+=======Download Complete=======
+Output path => {output_path}
+File name => {filename}
+File size => {filesize}Mb
+'''.format(output_path=self.__output_path, filename=self.__filename, filesize=self.__stream.filesize_mb))
         
-    def downloader(self, only_audio: bool, only_video: bool, adaptive: bool=True):
+    def downloader(self, only_audio: bool=False, only_video: bool=False, adaptive: bool=True):
         self.__stream = self.__yt.streams.filter(file_extension="mp4", only_audio=only_audio, only_video=only_video, adaptive=adaptive).first()
 
         self.__yt.register_on_progress_callback(self.bar_download_progress)
