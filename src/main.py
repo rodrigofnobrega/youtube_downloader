@@ -38,7 +38,6 @@ Type of download: '''))
         
         remove(info_video.get_file_path()+".mp3")
 
-
     remove(info_video.get_file_path())
 
 if __name__ == "__main__":

@@ -56,4 +56,4 @@ class InfoVideo:
                     "only_video": self.__only_video,
                     "adaptive": self.__adaptive
                 }
-    
+
